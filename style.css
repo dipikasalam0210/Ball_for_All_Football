@@ -2,18 +2,18 @@
   margin: 0;
   padding: 0;
 }
-body{
+body {
   max-width: 1300px;
   margin: 0 auto;
   font-family: 'Cormorant SC', serif;
 }
 header {
+  font-family: 'Cormorant SC', serif;
   background-color: rgb(20, 19, 19);
   border-radius: 20px;
   color: white;
   height: 550px;
   margin: 0 60px;
-  
 }
 h1 {
   font-size: 60px;
@@ -44,13 +44,12 @@ section {
 }
 .banner-img {
   position: absolute;
-  bottom: -148px;
+  bottom: -137px;
   right: 15px;
   width: 50%;
 }
 .banner-img img {
   width: 100%;
- 
 }
 .btn {
   padding: 15px 35px;
@@ -66,8 +65,8 @@ section {
 /*end of header*/
 
 /*Blog start*/
-.blog{
-  margin-left: 60px; 
+.blog {
+  margin-left: 60px;
   margin-right: 60px;
 }
 .blog .container {
@@ -80,12 +79,9 @@ section {
   flex-direction: column;
   height: 256px;
   font-size: 12px;
-  padding: 10px 30px 30px 30px;
+  padding: 10px 30px 50px 30px;
   width: 420px;
   border-radius: 10px;
-  
-
-  
 }
 .upcoming-match button {
   padding: 18px 25px;
@@ -97,7 +93,6 @@ section {
   color: rgb(20, 19, 19);
   font-weight: 700;
   font-family: 'Cormorant SC', serif;
-  
 }
 .upcoming-match button:hover {
   background-color: rgb(202, 131, 0);
@@ -107,18 +102,17 @@ section {
 }
 .blog-items {
   padding-left: 20px;
- 
 }
 .blog-card {
   display: flex;
-  flex-direction: row;
-  width: 100%;
+  flex-flow: row wrap;
 }
 .blog-text {
   border: 1px solid rgb(238, 238, 238);
   margin: 0 20px 20px 0;
   border-radius: 10px;
-  width: 100%;
+  flex-basis: 292px;
+  flex-grow: 3;
 }
 .blog-text img {
   width: 100%;
@@ -132,7 +126,7 @@ section {
   background-color: transparent;
   border-radius: 5px;
   font-weight: bold;
-  border:1px solid gray;
+  border: 1px solid gray;
 }
 h6 {
   font-size: 20px;
@@ -147,6 +141,7 @@ h6 {
 
 /*footer start*/
 footer {
+  font-family: 'Cormorant SC', serif;
   height: 200px;
   width: 100% important;
   background-color: rgb(20, 19, 19);
@@ -154,13 +149,12 @@ footer {
   text-align: center;
   margin-top: 50px;
   padding: 30px 0;
-  
 }
 h3 {
   padding-bottom: 20px;
   border-bottom: 1px solid gray;
   width: 80%;
-  margin-left: 101px;
+ margin-left: 57px;;
 }
 
 .footer-text ul li {
@@ -172,28 +166,111 @@ h3 {
 }
 /*end of footer */
 
-
-
 /*for upcoming match page*/
-.upcoming-page{
+.upcoming-page {
+  font-family: 'Cormorant SC', serif;
   margin-left: 10px;
   text-align: center;
-  width: 100%;
 }
-.upcoming-page .country .up{
-  margin-right:10px ;
- 
+.upcoming-page .country .up {
+  margin-right: 10px;
 }
-.upcoming-page .up-page{
+.upcoming-page .up-page {
   padding: 40px;
+  flex-basis: 190px;
 }
-.upcoming-page .country{
+.upcoming-page .country {
   margin-bottom: 20px;
 }
-.upcoming-page span{
-margin-top: 10px;
+.upcoming-page span {
+  margin-top: 10px;
 }
-.country{
+.country {
   display: flex;
-  height:30px;
+  height: 30px;
+}
+/*end of upcoming match page*/
+
+/*for tablets*/
+@media only screen and (max-width: 992px) {
+  h1 {
+    font-size: 50px 20px 0 20px;
+    font-family: 'Cormorant SC', serif;
+  }
+  header {
+    height: 400px;
+  }
+  .banner {
+    padding: 50px;
+  }
+  .banner-text {
+    padding-right: 30px;
+    width: 62%;
+  }
+  .banner-img {
+    bottom: -37px;
+  }
+  .blog .container {
+    flex-direction: column;
+  }
+
+  .upcoming-match {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+  }
+  .upcoming-match button a {
+    padding: 20px 35px;
+    margin-left: 10px;
+  }
+  .upcoming-match button {
+    background-color: white;
+    border: 1px solid gray;
+    margin-left: 10px;
+  }
+  .blog-text {
+    flex-grow: 2;
+  }
+  .footer-text {
+    padding: 0 204px;
+  }
+}
+/*done for tablets*/
+/*for mobile*/
+@media only screen and (max-width: 576px) {
+  .banner {
+    font-family: 'Cormorant SC', serif;
+    margin-right: 0;
+    height: 520px;
+  }
+  .banner-text {
+    width: 100%;
+    text-align: center;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  p {
+    margin-right: 0;
+  }
+  .banner-img {
+    position: relative;
+    bottom: -20px;
+    right: -108px;
+  }
+
+  .upcoming-match {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  footer {
+    font-family: 'Cormorant SC', serif;
+    margin-left: 58px;
+    margin: 0;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
 }
